@@ -63,20 +63,20 @@
             <div class="flex items-center">
                 <h3 class="inline-block py-2 sm:py-3 px-4 sm:px-6 bg-blue-300 rounded-lg text-lg font-bold">
                     Time Left
-                    <p class="inline py-1 px-2 sm:py-1.5 sm:px-3 bg-black text-white rounded-full">
-                        15
+                    <p class="inline py-1 px-2 sm:py-1.5 sm:px-3 bg-black text-white rounded-full" id="timeLeft">
+
                     </p>
                 </h3>
             </div>
         </div>
         <div class="mt-4">
-            <h1 class="font-bold text-xl sm:text-2xl">
+            <h1 class="font-bold text-xl sm:text-2xl" id="que">
                 What does HTML stand for?
             </h1>
             <div class="my-4 sm:my-6 space-y-4">
                 <p
                     class="flex justify-between items-center cursor-pointer bg-blue-50 p-2 sm:p-3 rounded-md hover:ring-2 hover:ring-blue-500 hover:ring-offset-2">
-                    <span>Hyper Text Makeup Language</span>
+                    <span id="op1"></span>
                     <i
                         class="fa-solid fa-check rounded-full bg-green-200 p-1.5 ring-2 ring-offset-2 ring-green-400"></i>
                 </p>
@@ -84,32 +84,42 @@
 
                 <p
                     class="flex justify-between items-center cursor-pointer bg-blue-50 p-2 sm:p-3 rounded-md hover:ring-2 hover:ring-blue-500 hover:ring-offset-2">
-                    <span>Hyper Text Makeup Language</span>
+                    <span id="op2"></span>
                     <i class="fa-solid fa-x rounded-full bg-red-200 p-1.5 ring-2 ring-offset-2 ring-red-400"></i>
                 </p>
 
                 <p
                     class="flex justify-between items-center cursor-pointer bg-blue-50 p-2 sm:p-3 rounded-md hover:ring-2 hover:ring-blue-500 hover:ring-offset-2">
-                    <span>Hyper Text Makeup Language</span>
+                    <span id="op3"></span>
                     <!-- <i class="fa-solid fa-check rounded-full bg-green-200 p-1.5 ring-2 ring-offset-2 ring-green-400"></i> -->
                 </p>
                 <p
                     class="flex justify-between items-center cursor-pointer bg-blue-50 p-2 sm:p-3 rounded-md hover:ring-2 hover:ring-blue-500 hover:ring-offset-2">
-                    <span>Hyper Text Makeup Language</span>
+                    <span id="op4"></span>
                     <!-- <i class="fa-solid fa-check rounded-full bg-green-200 p-1.5 ring-2 ring-offset-2 ring-green-400"></i> -->
                 </p>
             </div>
         </div>
         <div class="mx-auto p-4 flex justify-between md:items-center flex-col md:flex-row">
             <div class="justify-start text-center">
-                <p class="font-bold text-lg text-gray-500">
-                    2 of 50 questions
+                <p class="font-bold text-lg text-gray-500" id="many">
+
                 </p>
             </div>
-            <div class="justify-end my-7 md:my-0 text-center">
+            <div class="justify-end my-7 md:my-0 text-center space-x-4">
                 <a href="#"
-                    class="py-3 px-6 bg-blue-500 rounded-lg  my-4 text-white font-bold border-2 border-blue-500 hover:bg-blue-900">Next
+                    class="py-3 px-6 bg-blue-500 rounded-lg  my-4 text-white font-bold border-2 border-blue-500 hover:bg-blue-900"
+                    id="prev">Prev
                     Que</a>
+                <a href="#"
+                    class="py-3 px-6 bg-blue-500 rounded-lg  my-4 text-white font-bold border-2 border-blue-500 hover:bg-blue-900"
+                    id="next">Next
+                    Que</a>
+
+                <a href="#"
+                    class="py-3 px-6 bg-gray-100 rounded-lg  my-4 text-blue-500 font-bold border-2 border-blue-500 hover:bg-blue-500 hover:text-white hidden"
+                    id="submit">Submit
+                    Quiz</a>
             </div>
         </div>
     </div>
