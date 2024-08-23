@@ -8,6 +8,10 @@ const question = document.getElementById("question");
 
 const cont = document.getElementById("cont");
 
+const redeploy = document.getElementById("redeploy");
+
+const result = document.getElementById("result");
+
 
 start.addEventListener("click", () => {
     start.classList.add("hidden");
@@ -25,6 +29,11 @@ cont.addEventListener("click", () => {
     info.classList.add("hidden");
     question.classList.remove("hidden");
 
+})
+
+redeploy.addEventListener("click", () => {
+    result.classList.add("hidden");
+    start.classList.remove("hidden");
 })
 
 
