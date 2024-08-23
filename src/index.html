@@ -54,15 +54,15 @@
     <!-- question part -->
     <div id="question" class="bg-white mx-4 p-4 sm:p-6">
         <div class="flex flex-col sm:flex-row justify-between items-center border-b-2 p-3">
-            <div class="font-bold text-xl sm:text-2xl mb-3 sm:mb-0">
-                <h3>
+            <div class="font-bold text-xl sm:text-2xl mb-3 sm:mb-0 md:mx-3 sm:mx-2">
+                <h3 class="md:mr-3">
                     Awesome Quiz Application
                 </h3>
             </div>
             <div class="flex items-center">
                 <h3 class="inline-block py-2 sm:py-3 px-4 sm:px-6 bg-blue-300 rounded-lg text-lg font-bold">
                     Time Left
-                    <p class="inline py-1 px-2 sm:py-1.5 sm:px-3 bg-black text-white rounded-lg">
+                    <p class="inline py-1 px-2 sm:py-1.5 sm:px-3 bg-black text-white rounded-full">
                         15
                     </p>
                 </h3>
@@ -73,22 +73,36 @@
                 What does HTML stand for?
             </h1>
             <div class="my-4 sm:my-6 space-y-4">
-                <p class="cursor-pointer bg-blue-50 p-2 sm:p-3 rounded-md hover:ring-2 hover:ring-blue-500">
+                <p
+                    class="cursor-pointer bg-blue-50 p-2 sm:p-3 rounded-md hover:ring-2 hover:ring-blue-500 hover:ring-offset-2">
                     Hyper Text Makeup Language
                 </p>
-                <p class="cursor-pointer bg-blue-50 p-2 sm:p-3 rounded-md hover:ring-2 hover:ring-blue-500">
+                <p
+                    class="cursor-pointer bg-blue-50 p-2 sm:p-3 rounded-md hover:ring-2 hover:ring-blue-500 hover:ring-offset-2">
                     Hyper Text Markup Language
                 </p>
-                <p class="cursor-pointer bg-blue-50 p-2 sm:p-3 rounded-md hover:ring-2 hover:ring-blue-500">
+                <p
+                    class="cursor-pointer bg-blue-50 p-2 sm:p-3 rounded-md hover:ring-2 hover:ring-blue-500 hover:ring-offset-2">
                     Hyper Text Markingup Language
                 </p>
-                <p class="cursor-pointer bg-blue-50 p-2 sm:p-3 rounded-md hover:ring-2 hover:ring-blue-500">
+                <p
+                    class="cursor-pointer bg-blue-50 p-2 sm:p-3 rounded-md hover:ring-2 hover:ring-blue-500 hover:ring-offset-2">
                     Hyper Text Markedup Language
                 </p>
             </div>
         </div>
+        <div class="mx-auto p-4 flex justify-between md:items-center flex-col md:flex-row">
+            <div class="justify-start">
+                <p class="font-bold text-lg">
+                    2 of 50 questions
+                </p>
+            </div>
+            <div class="justify-end my-5 md:my-0 text-center">
+                <a href="#"
+                    class="py-3 px-6 bg-blue-500 rounded-lg  my-4 text-white font-bold border-2 border-blue-500 hover:bg-blue-900">Countinue</a>
+            </div>
+        </div>
     </div>
-
 </body>
 <script src="./main.js">
 </script>
