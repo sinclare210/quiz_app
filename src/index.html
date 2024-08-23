@@ -8,7 +8,7 @@
 </head>
 
 <body class="bg-blue-600 h-screen flex items-center justify-center">
-    <div>
+    <div class="hidden">
         <a class="py-4 px-8 bg-white rounded-md text-base font-bold cursor-pointer" id="start">
             Start Quiz
         </a>
@@ -51,10 +51,44 @@
             </div>
         </div>
     </div>
-
-    <div id="#start">
-
+    <!-- question part -->
+    <div id="question" class="bg-white mx-4 p-4 sm:p-6">
+        <div class="flex flex-col sm:flex-row justify-between items-center border-b-2 p-3">
+            <div class="font-bold text-xl sm:text-2xl mb-3 sm:mb-0">
+                <h3>
+                    Awesome Quiz Application
+                </h3>
+            </div>
+            <div class="flex items-center">
+                <h3 class="inline-block py-2 sm:py-3 px-4 sm:px-6 bg-blue-300 rounded-lg text-lg font-bold">
+                    Time Left
+                    <p class="inline py-1 px-2 sm:py-1.5 sm:px-3 bg-black text-white rounded-lg">
+                        15
+                    </p>
+                </h3>
+            </div>
+        </div>
+        <div class="mt-4">
+            <h1 class="font-bold text-xl sm:text-2xl">
+                What does HTML stand for?
+            </h1>
+            <div class="my-4 sm:my-6 space-y-4">
+                <p class="cursor-pointer bg-blue-50 p-2 sm:p-3 rounded-md hover:ring-2 hover:ring-blue-500">
+                    Hyper Text Makeup Language
+                </p>
+                <p class="cursor-pointer bg-blue-50 p-2 sm:p-3 rounded-md hover:ring-2 hover:ring-blue-500">
+                    Hyper Text Markup Language
+                </p>
+                <p class="cursor-pointer bg-blue-50 p-2 sm:p-3 rounded-md hover:ring-2 hover:ring-blue-500">
+                    Hyper Text Markingup Language
+                </p>
+                <p class="cursor-pointer bg-blue-50 p-2 sm:p-3 rounded-md hover:ring-2 hover:ring-blue-500">
+                    Hyper Text Markedup Language
+                </p>
+            </div>
+        </div>
     </div>
+
 </body>
 <script src="./main.js">
 </script>
