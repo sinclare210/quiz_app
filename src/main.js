@@ -30,8 +30,6 @@ const submit = document.getElementById("submit");
 
 const back = document.getElementById("back");
 
-const prev = document.getElementById("prev");
-
 const many = document.getElementById("many");;
 
 let timeLeft;
@@ -54,7 +52,7 @@ exit.addEventListener("click", () => {
 cont.addEventListener("click", () => {
     info.classList.add("hidden");
     question.classList.remove("hidden");
-    startCountdown();
+  
     
 
 })
@@ -590,6 +588,7 @@ updateQuestion(countQue);
 
 next.addEventListener("click", () => {
   countQue++;
+  startCountdown();
       many.textContent = `${countQue+1} of 50 questions `
   if (countQue < questions.length) {
     updateQuestion(countQue);
@@ -600,19 +599,4 @@ next.addEventListener("click", () => {
    
   }
 });
-
-prev.addEventListener("click", () => {
-  if (countQue > 0) {
-    countQue--;
-    many.textContent = `${countQue + 1} of 50 questions `
-    updateQuestion(countQue);
-    next.disabled = false; 
-  }
-  if (countQue === 0) {
-    prev.disabled = true; 
-  }
-});
-
-
-prev.disabled = true;
 
