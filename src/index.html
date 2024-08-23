@@ -8,7 +8,7 @@
 </head>
 
 <body class="bg-blue-600 h-screen flex items-center justify-center">
-    <div class="hidden">
+    <div class="">
         <a class="py-4 px-8 bg-white rounded-md text-base font-bold cursor-pointer" id="start">
             Start Quiz
         </a>
@@ -47,12 +47,13 @@
                     id="exit">Exit
                     Quiz</a>
                 <a href="#"
-                    class="py-3 px-6 bg-blue-500 rounded-lg  my-4 text-white font-bold border-2 border-blue-500 hover:bg-blue-900">Countinue</a>
+                    class="py-3 px-6 bg-blue-500 rounded-lg  my-4 text-white font-bold border-2 border-blue-500 hover:bg-blue-900"
+                    id="cont">Countinue</a>
             </div>
         </div>
     </div>
     <!-- question part -->
-    <div id="question" class="bg-white mx-4 p-4 sm:p-6">
+    <div id="question" class="bg-white mx-4 p-4 sm:p-6 hidden">
         <div class="flex flex-col sm:flex-row justify-between items-center border-b-2 p-3">
             <div class="font-bold text-xl sm:text-2xl mb-3 sm:mb-0 md:mx-3 sm:mx-2">
                 <h3 class="md:mr-3">
@@ -74,20 +75,28 @@
             </h1>
             <div class="my-4 sm:my-6 space-y-4">
                 <p
-                    class="cursor-pointer bg-blue-50 p-2 sm:p-3 rounded-md hover:ring-2 hover:ring-blue-500 hover:ring-offset-2">
-                    Hyper Text Makeup Language
+                    class="flex justify-between items-center cursor-pointer bg-blue-50 p-2 sm:p-3 rounded-md hover:ring-2 hover:ring-blue-500 hover:ring-offset-2">
+                    <span>Hyper Text Makeup Language</span>
+                    <i
+                        class="fa-solid fa-check rounded-full bg-green-200 p-1.5 ring-2 ring-offset-2 ring-green-400"></i>
+                </p>
+
+
+                <p
+                    class="flex justify-between items-center cursor-pointer bg-blue-50 p-2 sm:p-3 rounded-md hover:ring-2 hover:ring-blue-500 hover:ring-offset-2">
+                    <span>Hyper Text Makeup Language</span>
+                    <i class="fa-solid fa-x rounded-full bg-red-200 p-1.5 ring-2 ring-offset-2 ring-red-400"></i>
+                </p>
+
+                <p
+                    class="flex justify-between items-center cursor-pointer bg-blue-50 p-2 sm:p-3 rounded-md hover:ring-2 hover:ring-blue-500 hover:ring-offset-2">
+                    <span>Hyper Text Makeup Language</span>
+                    <!-- <i class="fa-solid fa-check rounded-full bg-green-200 p-1.5 ring-2 ring-offset-2 ring-green-400"></i> -->
                 </p>
                 <p
-                    class="cursor-pointer bg-blue-50 p-2 sm:p-3 rounded-md hover:ring-2 hover:ring-blue-500 hover:ring-offset-2">
-                    Hyper Text Markup Language
-                </p>
-                <p
-                    class="cursor-pointer bg-blue-50 p-2 sm:p-3 rounded-md hover:ring-2 hover:ring-blue-500 hover:ring-offset-2">
-                    Hyper Text Markingup Language
-                </p>
-                <p
-                    class="cursor-pointer bg-blue-50 p-2 sm:p-3 rounded-md hover:ring-2 hover:ring-blue-500 hover:ring-offset-2">
-                    Hyper Text Markedup Language
+                    class="flex justify-between items-center cursor-pointer bg-blue-50 p-2 sm:p-3 rounded-md hover:ring-2 hover:ring-blue-500 hover:ring-offset-2">
+                    <span>Hyper Text Makeup Language</span>
+                    <!-- <i class="fa-solid fa-check rounded-full bg-green-200 p-1.5 ring-2 ring-offset-2 ring-green-400"></i> -->
                 </p>
             </div>
         </div>
@@ -105,6 +114,7 @@
         </div>
     </div>
 </body>
+<script src="https://kit.fontawesome.com/4a53b8c85a.js" crossorigin="anonymous"></script>
 <script src="./main.js">
 </script>
 
