@@ -32,12 +32,20 @@ const submit = document.getElementById("submit");
 
 const back = document.getElementById("back");
 
-const many = document.getElementById("many");;
+const many = document.getElementById("many");
+
+const opt1 = document.getElementById("opt1");
+const opt2 = document.getElementById("opt2");
+const opt3 = document.getElementById("opt3");
+const opt4 = document.getElementById("opt4");
+
+
 
 let timeLeft;
 
 let countQue = 0;
 
+const arrayOpt = [opt1,opt2,opt3,opt4];
 
 start.addEventListener("click", () => {
     start.classList.add("hidden");
@@ -54,6 +62,7 @@ exit.addEventListener("click", () => {
 cont.addEventListener("click", () => {
     info.classList.add("hidden");
     question.classList.remove("hidden");
+    startCountdown();
   
     
 
@@ -99,6 +108,8 @@ updateQuestion(countQue);
 next.addEventListener("click", () => {
   countQue++;
   startCountdown();
+  
+  enableOptions();
       many.textContent = `${countQue+1} of 50 questions `
   if (countQue < questions.length) {
     updateQuestion(countQue);
@@ -109,4 +120,25 @@ next.addEventListener("click", () => {
    
   }
 });
+
+function stopCountdown(){
+    timeLefts.textContent = timeLeft;
+  clearInterval(timeLeft)
+}
+
+function disableOptions(){
+   arrayOpt.forEach(opt => opt.classList.remove("cursor-pointer"))
+  arrayOpt.forEach(opt => opt.classList.add("cursor-not-allowed"))
+
+}
+function enableOptions(){
+     arrayOpt.forEach(opt => opt.classList.add("cursor-pointer"))
+  arrayOpt.forEach(opt => opt.classList.remove("cursor-not-allowed"))
+}
+
+arrayOpt.forEach(opt => opt.addEventListener("click",() =>{
+  disableOptions();
+  stopCountdown();
+}))
+
 
