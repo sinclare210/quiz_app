@@ -14,7 +14,7 @@ const redeploy = document.getElementById("redeploy");
 
 const result = document.getElementById("result");
 
-const timeLefts = document.getElementById("timeLeft");
+const timeLeft = document.getElementById("timeLeft");
 
 const next = document.getElementById("next");
 
@@ -41,11 +41,6 @@ const opt4 = document.getElementById("opt4");
 
 
 
-let timeLeft;
-
-let countQue = 0;
-
-const arrayOpt = [opt1,opt2,opt3,opt4];
 
 start.addEventListener("click", () => {
     start.classList.add("hidden");
@@ -62,83 +57,60 @@ exit.addEventListener("click", () => {
 cont.addEventListener("click", () => {
     info.classList.add("hidden");
     question.classList.remove("hidden");
-    startCountdown();
-  
-    
-
+    showQuestions(0);
+    queCounter(1);
+    startTimer(15);
 })
+
+let timeValue = 15;
+let queCount = 0;
+let queNumb = 1;
+let userScore = 0;
+let counter;
+
 
 redeploy.addEventListener("click", () => {
     result.classList.add("hidden");
     start.classList.remove("hidden");
+    timeValue = 15;
+    queCount = 0;
+    queNumb = 1;
+    userScore = 0;
+    showQuestions(queCount);
+    queCounter(queNumb);
+    clearInterval(counter);
+    startTimer(timeValue);
+    timeLeft.textContent = "time left";
+    next.classList.add("hidden");
+
 })
 
-//setting countdown
-function startCountdown(){
-    timeLeft = 20;
-    timeLefts.textContent = timeLeft;
-    setInterval(() => {
-        timeLeft--;
-        if(timeLeft > 0){
-            timeLefts.textContent = timeLeft;
-        }
-        if(timeLeft === 0){
-            timeLefts.textContent = 0;
-        }
-    },1000);
-}
-
-//dynamically updating the question
-
-
-const updateQuestion = (index) => {
-  que.textContent = questions[index]["question"];
-  op1.textContent = questions[index]["options"][0];
-  op2.textContent = questions[index]["options"][1];
-  op3.textContent = questions[index]["options"][2];
-  op4.textContent = questions[index]["options"][3];
-};
-
-// Initial setup
-countQue = 0;
-updateQuestion(countQue);
-      many.textContent = `${countQue+1} of 50 questions `
-
-
-next.addEventListener("click", () => {
-  countQue++;
-  startCountdown();
-  
-  enableOptions();
-      many.textContent = `${countQue+1} of 50 questions `
-  if (countQue < questions.length) {
-    updateQuestion(countQue);
-  } else {
+next.addEventListener("click", () =>{
+  if(queCount < questions.length){
+    queCount++;
+    queNumb++;
+    showQuestions(queCount);
+    queCounter(queNumb);
+    clearInterval(counter);
+    startTimer(timeValue);
+    timeLeft.textContent = "Time left";
     next.classList.add("hidden");
-    submit.classList.remove("hidden");
-    
-   
+  }else{
+    clearInterval(counter);
+    showResult();
   }
-});
+})
 
-function stopCountdown(){
-    timeLefts.textContent = timeLeft;
-  clearInterval(timeLeft)
+function showQuestions(index){
+  que.textContent = `${questions[index]["numb"]}. ${questions[index]["question"]}`;
+  op1.textContent = `${questions[index]["options"][0]}`
+  op1.textContent = `${questions[index]["options"][1]}`
+  op1.textContent = `${questions[index]["options"][2]}`
+  op1.textContent = `${questions[index]["options"][3]}`
+
+  
 }
 
-function disableOptions(){
-   arrayOpt.forEach(opt => opt.classList.remove("cursor-pointer"))
-  arrayOpt.forEach(opt => opt.classList.add("cursor-not-allowed"))
 
-}
-function enableOptions(){
-     arrayOpt.forEach(opt => opt.classList.add("cursor-pointer"))
-  arrayOpt.forEach(opt => opt.classList.remove("cursor-not-allowed"))
-}
-
-arrayOpt.forEach(opt => opt.addEventListener("click",() =>{
-  disableOptions();
-  stopCountdown();
-}))
 
 
