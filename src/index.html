@@ -7,30 +7,30 @@
     <link href="./output.css" rel="stylesheet">
 </head>
 
-<body class="bg-blue-600 h-screen flex items-center justify-center">
+<body class=" bg-red-500   h-screen flex items-center justify-center">
     <div class="" id="start">
-        <a class="py-4 px-8 bg-white rounded-md text-base font-bold cursor-pointer">
+        <a
+            class="py-4 px-8 bg-white rounded-md text-lg font-bold cursor-pointer text-yellow-600 hover:text-white hover:bg-yellow-600 transition-colors duration-300">
             Start Quiz
         </a>
     </div>
     <div class="bg-white rounded-xl hidden m-6" id="info">
         <div class="border-b-2 p-4">
-            <h1 class="text-center font-bold text-lg md:text-2xl">
+            <h1 class="text-center font-bold text-xl md:text-2xl text-red-700">
                 Some Rules Of This Quiz
             </h1>
         </div>
 
-        <div class="">
-            <div class="text-base space-y-3 my-4 mx-8 text-left">
+        <div class="rounded-lg">
+            <div class="text-base space-y-3 my-4 mx-8 text-left text-gray-700">
                 <p>
-                    1. You will have only <span class=" text-blue-500 font-bold">15 seconds</span> per each
-                    question.
+                    1. You will have only <span class="text-yellow-500 font-bold">15 seconds</span> per each question.
                 </p>
                 <p>
                     2. Once you select your answer, you can't reselect.
                 </p>
                 <p>
-                    3. You can't select any opion once time goes off.
+                    3. You can't select any option once time goes off.
                 </p>
                 <p>
                     4. You can't exit from the quiz while you're playing.
@@ -39,84 +39,65 @@
                     5. You'll get points on the basis of your correct answer.
                 </p>
             </div>
-            <div class="border-b-2">
-            </div>
+            <div class="border-b-2"></div>
             <div class="flex justify-end space-x-4 mx-4 items-center my-auto">
                 <a href="#"
-                    class="py-3 px-6 bg-gray-100 rounded-lg  my-4 text-blue-500 font-bold border-2 border-blue-500 hover:bg-blue-500 hover:text-white"
-                    id="exit">Exit
-                    Quiz</a>
+                    class="py-3 px-6 bg-gray-100 rounded-lg my-4 text-red-500 font-bold border-2 border-red-500 hover:bg-red-500 hover:text-white transition-colors duration-300"
+                    id="exit">Exit Quiz</a>
                 <a href="#"
-                    class="py-3 px-6 bg-blue-500 rounded-lg  my-4 text-white font-bold border-2 border-blue-500 hover:bg-blue-900"
-                    id="cont">Countinue</a>
+                    class="py-3 px-6 bg-red-500 rounded-lg my-4 text-white font-bold border-2 border-red-500 hover:bg-red-700 transition-colors duration-300"
+                    id="cont">Continue</a>
             </div>
         </div>
     </div>
     <!-- question part -->
-    <div id="question" class="bg-white mx-4 p-4 sm:p-6 hidden">
+    <div id="question" class="bg-white mx-4 p-4 sm:p-6 hidden rounded-lg">
         <div class="flex flex-col sm:flex-row justify-between items-center border-b-2 p-3">
-            <div class="font-bold text-lg md:text-xl mb-3 sm:mb-0 md:mx-3 sm:mx-2">
+            <div class="font-bold text-lg md:text-xl mb-3 sm:mb-0 md:mx-3 sm:mx-2 text-red-700">
                 <h3 class="md:mr-3">
                     Awesome Quiz Application
                 </h3>
             </div>
             <div class="flex items-center">
                 <h3
-                    class="inline-block py-2 sm:py-3 px-4 sm:px-6 bg-blue-300 rounded-lg text-base md:text-lg font-bold">
+                    class="inline-block py-2 sm:py-3 px-4 sm:px-6 bg-yellow-300 rounded-lg text-base md:text-lg font-bold">
                     Time Left
-                    <p class="inline py-1 px-2 sm:py-1.5 sm:px-3 bg-black text-white rounded-full" id="timeLeft">
-
-                    </p>
+                    <p class="inline py-1 px-2 sm:py-1.5 sm:px-3 bg-black text-white rounded-full" id="timeLeft"></p>
                 </h3>
             </div>
         </div>
         <div class="mt-4">
-            <h1 class="font-bold text-lg md:text-2xl" id="que">
-
-            </h1>
+            <h1 class="font-bold text-lg md:text-2xl text-red-700" id="que"></h1>
             <div class="my-4 sm:my-6 space-y-4">
-                <p class="flex justify-between items-center  bg-blue-50 p-2 sm:p-3 rounded-md hover:ring-2 hover:ring-blue-500 hover:ring-offset-2 cursor-pointer"
+                <p class="flex justify-between items-center bg-blue-50 p-2 sm:p-3 rounded-md hover:bg-blue-100 cursor-pointer"
                     id="opt1">
                     <span id="op1"></span>
-
                 </p>
-
-
-                <p class="flex justify-between items-center cursor-pointer bg-blue-50 p-2 sm:p-3 rounded-md hover:ring-2 hover:ring-blue-500 hover:ring-offset-2"
+                <p class="flex justify-between items-center cursor-pointer bg-blue-50 p-2 sm:p-3 rounded-md hover:bg-blue-100"
                     id="opt2">
                     <span id="op2"></span>
-
                 </p>
-
-                <p class="flex justify-between items-center cursor-pointer bg-blue-50 p-2 sm:p-3 rounded-md hover:ring-2 hover:ring-blue-500 hover:ring-offset-2"
+                <p class="flex justify-between items-center cursor-pointer bg-blue-50 p-2 sm:p-3 rounded-md hover:bg-blue-100"
                     id="opt3">
                     <span id="op3"></span>
-                    <!-- <i class="fa-solid fa-check rounded-full bg-green-200 p-1.5 ring-2 ring-offset-2 ring-green-400"></i> -->
                 </p>
-                <p class="flex justify-between items-center cursor-pointer bg-blue-50 p-2 sm:p-3 rounded-md hover:ring-2 hover:ring-blue-500 hover:ring-offset-2"
+                <p class="flex justify-between items-center cursor-pointer bg-blue-50 p-2 sm:p-3 rounded-md hover:bg-blue-100"
                     id="opt4">
                     <span id="op4"></span>
-                    <!-- <i class="fa-solid fa-check rounded-full bg-green-200 p-1.5 ring-2 ring-offset-2 ring-green-400"></i> -->
                 </p>
             </div>
         </div>
         <div class="mx-auto p-4 flex justify-between md:items-center flex-col md:flex-row">
             <div class="justify-start text-center">
-                <p class="font-bold text-lg text-gray-500" id="many">
-
-                </p>
+                <p class="font-bold text-lg text-gray-500" id="many"></p>
             </div>
             <div class="justify-end my-7 md:my-0 text-center space-x-4">
-
                 <a href="#"
-                    class="py-3 px-6 bg-blue-500 rounded-lg  my-4 text-white font-bold border-2 border-blue-500 hover:bg-blue-900"
-                    id="next">Next
-                    Que</a>
-
+                    class="py-3 px-6 bg-red-500 rounded-lg my-4 text-white font-bold border-2 border-red-500 hover:bg-red-700 transition-colors duration-300"
+                    id="next">Next</a>
                 <a href="#"
-                    class="py-3 px-6 bg-gray-100 rounded-lg  my-4 text-blue-500 font-bold border-2 border-blue-500 hover:bg-blue-500 hover:text-white hidden"
-                    id="submit">Submit
-                    Quiz</a>
+                    class="py-3 px-6 bg-gray-100 rounded-lg my-4 text-red-500 font-bold border-2 border-red-500 hover:bg-red-500 hover:text-white hidden transition-colors duration-300"
+                    id="submit">Submit Quiz</a>
             </div>
         </div>
     </div>
@@ -124,28 +105,23 @@
     <div class="space-y-5 bg-white p-10 flex-col justify-center items-center hidden mx-3" id="result">
         <div class="flex justify-center">
             <i class="fa-solid fa-crown fa-2xl" style="color: #FFD43B;"></i>
-
         </div>
         <div>
-            <h1 class="text-lg font-bold md:text-2xl">
+            <h1 class="text-lg font-bold md:text-2xl text-red-700">
                 You've Completed The Quiz
             </h1>
-
-            <p class="text-center mt-2 font-bold text-gray-400" id="resultText">
-
-            </p>
-
+            <p class="text-center mt-2 font-bold text-gray-400" id="resultText"></p>
         </div>
-        <div class="flex justify-end space-x-4 mx-4 items-center my-auto">
-            <a class="py-3 px-6 bg-gray-100 rounded-lg  my-2 text-blue-500 font-bold border-2 border-blue-500 hover:bg-blue-500 hover:text-white"
-                href="./index.html">Quit
-                Quiz</a>
-            <a href="./index.html" id="redeploy" class=" py-3 px-6 bg-blue-500 rounded-lg my-2 text-white font-bold border-2
-                border-blue-500 hover:bg-blue-900">Redeploy
-                Quiz</a>
+        <div class="flex justify-end space-x-4 items-center my-auto">
+            <a class="py-3 px-6 bg-gray-100 rounded-lg my-2 text-red-500 font-bold border-2 border-red-500 hover:bg-red-500 hover:text-white transition-colors duration-300"
+                href="./index.html">Quit</a>
+            <a href="./index.html" id="redeploy"
+                class="py-3 px-6 bg-red-500 rounded-lg my-2 text-white font-bold border-2 border-red-500 hover:bg-red-700 transition-colors duration-300">Redeploy</a>
         </div>
     </div>
 </body>
+
+
 <script type="module" src="./main.js">
 </script>
 <script src="https://kit.fontawesome.com/4a53b8c85a.js" crossorigin="anonymous"></script>

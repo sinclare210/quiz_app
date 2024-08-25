@@ -1,10 +1,11 @@
+//importing questions from from external js file
 import questions from "./question.js";
-
+//getting html element that would be updated dynamically
 const start = document.getElementById("start");
 const info = document.getElementById("info");
 const exit = document.getElementById("exit");
 const question = document.getElementById("question");
-const cont = document.getElementById("cont");
+const continueBtn = document.getElementById("cont");
 const redeploy = document.getElementById("redeploy");
 const result = document.getElementById("result");
 const timeLeft = document.getElementById("timeLeft");
@@ -21,28 +22,30 @@ const opt1 = document.getElementById("opt1");
 const opt2 = document.getElementById("opt2");
 const opt3 = document.getElementById("opt3");
 const opt4 = document.getElementById("opt4");
-
+//
 const arrayOp = [op1, op2, op3, op4];
 const arrayOpt = [opt1, opt2, opt3, opt4];
-
+//hiding and viewing pages
 start.addEventListener("click", () => {
   start.classList.add("hidden");
   info.classList.remove("hidden");
 });
-
+//hiding and viewing pages
 exit.addEventListener("click", () => {
   info.classList.add("hidden");
   start.classList.remove("hidden");
 });
 
-cont.addEventListener("click", () => {
+
+continueBtn.addEventListener("click", () => {
   info.classList.add("hidden");
   question.classList.remove("hidden");
+  next.classList.add("hidden");
   showQuestions(0);
   queCounter(1);
   startTimer(timeValue);
 });
-
+//initailizing variables
 let timeValue = 15;
 let queCount = 0;
 let queNumb = 1;
@@ -132,7 +135,7 @@ function optionSelected(answer) {
 
   next.classList.remove("hidden");
 }
-//jdjd
+//This function shows the user score and comment on what the user got.
 function showResult() {
   question.classList.add("hidden");
   result.classList.remove("hidden");
@@ -166,7 +169,8 @@ function startTimer(time) {
     }
   }
 }
-
+//this funtion shows the number of questions that the user has answered and how many is left by 
+//changing the content bottom p tag oon the quetions page
 function queCounter(index) {
   many.textContent = `${index} of ${questions.length}`;
 }
