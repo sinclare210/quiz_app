@@ -1,4 +1,4 @@
-import questions from "../question.js";
+import questions from "./question.js";
 
 const start = document.getElementById("start");
 const info = document.getElementById("info");
