@@ -125,7 +125,7 @@ function optionSelected(answer) {
   } else {
     answer.classList.add("bg-red-300");
     answer.insertAdjacentHTML("beforeend", crossIconTag);
-
+//add show the correct answer if the wrong answer was picked
     for (let i = 0; i < alloptions; i++) {
       if (arrayOp[i].textContent.trim() === correctAnswer) {
         arrayOpt[i].classList.add("bg-green-300");
