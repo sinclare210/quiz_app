@@ -132,7 +132,7 @@ function optionSelected(answer) {
 
   next.classList.remove("hidden");
 }
-
+//jdjd
 function showResult() {
   question.classList.add("hidden");
   result.classList.remove("hidden");
