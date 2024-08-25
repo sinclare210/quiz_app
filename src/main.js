@@ -174,7 +174,7 @@ function startTimer(time) {
         }
       }
  //this part of the code disable sending of click event when the time is up     
-      arrayOpt.forEach((opt) => opt.classList.add("pointer-events-none"));
+      arrayOpt.forEach((opt) => opt.classList.add("c"));
       next.classList.remove("hidden");
     }
   }
